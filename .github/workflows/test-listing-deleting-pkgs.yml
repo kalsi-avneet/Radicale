@@ -20,15 +20,16 @@ jobs:
         uses: actions/checkout@v4
 
       - name: List packages
+        env:
+          ENV_CONTEXT: "${{ toJson(env) }}"
         run: |
           echo "listing packages"
           echo "REGISTRY - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
-          echo "------------- github context"
-          echo "$GITHUB_CONTEXT"
-          echo "${{ toJson(github) }}"
+          # echo "------------- github context"
+          # echo "$GITHUB_CONTEXT"
+          # echo "${{ toJson(github) }}"
           echo "------------- env context"
           echo "$ENV_CONTEXT"
-          echo "${{ toJson(env) }}"
           echo "------------OTher env"
           env
           
