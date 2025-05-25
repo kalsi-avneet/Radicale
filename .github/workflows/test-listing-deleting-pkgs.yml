@@ -22,12 +22,12 @@ jobs:
       - name: List packages
         env:
           ENV_CONTEXT: "${{ toJson(env) }}"
+          GITHUB_CONTEXT: "${{ toJson(github) }}"
         run: |
           echo "listing packages"
           echo "REGISTRY - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
-          # echo "------------- github context"
-          # echo "$GITHUB_CONTEXT"
-          # echo "${{ toJson(github) }}"
+          echo "------------- github context"
+          echo "$GITHUB_CONTEXT"
           echo "------------- env context"
           echo "$ENV_CONTEXT"
           echo "------------OTher env"
