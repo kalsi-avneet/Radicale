@@ -1,8 +1,12 @@
 # Changelog
 
-## 3.5.3.dev
+## 3.5.4.dev
+* Improve: item filter enhanced for 3rd level supporting VALARM and honoring TRIGGER (offset or absolute)
+* Enhancement: add Caddy config file example (see contrib directory)
+
+## 3.5.3
 * Add: [auth] htpasswd: support for Argon2 hashes
-* Improve: catch error on calendar collection upload and display problematic item on debug level
+* Improve: catch error on calendar collection upload and display problematic item content on debug level
 * Add: [auth] urldecode_username: optional decode provided username (e.g. encoded email address)
 
 ## 3.5.2

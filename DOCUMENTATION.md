@@ -350,7 +350,7 @@ prompt. Apply the following configuration:
 * Service name: `Radicale`
 * Application
   * Path: `C:\Path\To\Python\python.exe`
-  * Arguments: `-m radicale --config C:\Path\To\Config`
+  * Arguments: `--config C:\Path\To\Config`
 * I/O redirection
   * Error: `C:\Path\To\Radicale.log`
 
@@ -1458,6 +1458,8 @@ Log response on level=debug
 Default: `False`
 
 ##### rights_rule_doesnt_match_on_debug
+
+_(>= 3.2.3)_
 
 Log rights rule which doesn't match on level=debug
 
