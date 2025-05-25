@@ -23,6 +23,7 @@ jobs:
         env:
           ENV_CONTEXT: "${{ toJson(env) }}"
           GITHUB_CONTEXT: "${{ toJson(github) }}"
+          VARS_CONTEXT: "${{ toJson(vars) }}"
         run: |
           echo "listing packages"
           echo "REGISTRY - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
@@ -30,6 +31,8 @@ jobs:
           echo "$GITHUB_CONTEXT"
           echo "------------- env context"
           echo "$ENV_CONTEXT"
+          echo "------------- vars context"
+          echo "$VARS_CONTEXT"
           echo "------------OTher env"
           env
           
