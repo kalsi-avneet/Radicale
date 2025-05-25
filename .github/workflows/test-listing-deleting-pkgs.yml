@@ -25,10 +25,10 @@ jobs:
           echo "REGISTRY - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
           echo "------------- github context"
           echo "$GITHUB_CONTEXT"
-          echo "${{ github }}"
+          echo "${{ toJson(github) }}"
           echo "------------- env context"
           echo "$ENV_CONTEXT"
-          echo "${{ env }}"
+          echo "${{ toJson(env) }}"
           echo "------------OTher env"
           env
           
