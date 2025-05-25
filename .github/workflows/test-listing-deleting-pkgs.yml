@@ -9,12 +9,26 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
+  clean:
+    runs-on: ubuntu-latest
+    name: Delete old nightly images
+    steps:
+      - name: delete old images
+        uses: snok/container-retention-policy@v3.0.0
+        with:
+          account: user
+          token: ${{ secrets.GITHUB_TOKEN }}
+          image-names: ${{ env.IMAGE_NAME }}
+          image-tags: "nightly-*"
+          cut-off: 5d
+          dry-run: true
+
+
   list-images-and-versions:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
