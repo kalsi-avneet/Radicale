@@ -1,7 +1,7 @@
 name: See if images can be listed and deleted
 
 on:
-  push
+  push:
   workflow_dispatch:
 
 env:
