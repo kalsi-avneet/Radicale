@@ -22,7 +22,12 @@ jobs:
       - name: List packages
         run: |
           echo "listing packages"
-          echo "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
+          echo "REGISTRY - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
+          echo "------------- github context"
+          echo "$GITHUB_CONTEXT"
+          echo "------------- env context"
+          echo "$ENV_CONTEXT"
+          echo "------------OTher env"
           env
           
 
