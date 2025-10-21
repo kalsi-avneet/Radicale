@@ -13,5 +13,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           image-names: "radicale"
           image-tags: "nightly-*"
-          cut-off: 30d
+          cut-off: 200d
           dry-run: true
